@@ -1,3 +1,29 @@
+GET http://localhost:8080/api/v1/greet
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2OTE1MTc4ODd9.mlJ9QCmDMCGLUPVKqhyhSNpgQgFnB0OIoBhA1lfpap0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-08T195529.200.txt
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+Content-Length: 44
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username":"user",
+  "password":"1234"
+}
+
+<> 2023-08-08T195447.200.json
+
+###
+
 GET http://localhost:8080/api/users
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2OTE1MTY4Mzl9.4sOrUPVCtL3hpqz3yq5JznxmPZZkJao9ly7mMlbbHMc
 Connection: Keep-Alive
