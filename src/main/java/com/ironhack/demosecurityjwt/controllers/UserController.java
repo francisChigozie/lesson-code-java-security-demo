@@ -1,4 +1,4 @@
-package com.ironhack.demosecurityjwt.controllers.interfaces;
+package com.ironhack.demosecurityjwt.controllers;
 
 import com.ironhack.demosecurityjwt.models.User;
 
@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Interface for UserController. Contains methods for handling user related operations
  */
-public interface UserControllerInterface {
+public interface UserController {
     /**
      * Retrieves a list of all users
      *

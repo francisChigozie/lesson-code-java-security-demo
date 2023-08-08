@@ -1,9 +1,9 @@
-package com.ironhack.demosecurityjwt.controllers.interfaces;
+package com.ironhack.demosecurityjwt.controllers;
 
-import com.ironhack.demosecurityjwt.dtos.RoleToUserDTO;
+import com.ironhack.demosecurityjwt.dtos.RoleToUserDto;
 import com.ironhack.demosecurityjwt.models.Role;
 
-public interface RoleControllerInterface {
+public interface RoleController {
     /**
      * Save a new role
      *
@@ -16,5 +16,5 @@ public interface RoleControllerInterface {
      *
      * @param roleToUserDTO object containing the username and role name to be added to the user
      */
-    void addRoleToUser(RoleToUserDTO roleToUserDTO);
+    void addRoleToUser(RoleToUserDto roleToUserDTO);
 }

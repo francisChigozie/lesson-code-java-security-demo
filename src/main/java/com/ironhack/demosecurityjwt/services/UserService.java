@@ -1,4 +1,4 @@
-package com.ironhack.demosecurityjwt.services.interfaces;
+package com.ironhack.demosecurityjwt.services;
 
 import com.ironhack.demosecurityjwt.models.Role;
 import com.ironhack.demosecurityjwt.models.User;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * The UserServiceInterface is an interface that defines the methods that are available to perform operations on User entities.
  */
-public interface UserServiceInterface {
+public interface UserService {
 
     /**
      * This method is used to save a User entity to the database.

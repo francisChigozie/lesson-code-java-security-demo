@@ -4,7 +4,7 @@ import com.ironhack.demosecurityjwt.models.User;
 import com.ironhack.demosecurityjwt.models.Role;
 import com.ironhack.demosecurityjwt.repositories.RoleRepository;
 import com.ironhack.demosecurityjwt.repositories.UserRepository;
-import com.ironhack.demosecurityjwt.services.interfaces.UserServiceInterface;
+import com.ironhack.demosecurityjwt.services.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class UserService implements UserServiceInterface, UserDetailsService {
+public class UserServiceImpl implements UserService, UserDetailsService {
 
     /**
      * Autowired UserRepository for database operations.

@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/security_demo?serverTimezone=UTC
+    username: ironhacker
+    password: 1r0nh4ck3r
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+    show-sql: true
+
+server:
+  error:
+    include-stacktrace: never

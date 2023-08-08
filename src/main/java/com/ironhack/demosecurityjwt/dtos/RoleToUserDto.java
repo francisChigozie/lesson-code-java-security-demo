@@ -6,7 +6,7 @@ import lombok.Data;
  * Data transfer object for passing information for adding a role to a user
  */
 @Data
-public class RoleToUserDTO {
+public class RoleToUserDto {
     /**
      * The username of the user
      */
