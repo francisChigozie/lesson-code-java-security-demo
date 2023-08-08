@@ -11,7 +11,7 @@
 
 ### **1. Obtain a JWT Token**
 
-**Endpoint:** `/login`  
+**Endpoint:** `api/login`  
 **Method:** `POST`  
 **Body:** JSON object containing your credentials.
 
@@ -26,7 +26,7 @@
 
 **Steps:**
 
-1. Send a POST request to `/login` with your credentials in the JSON format.
+1. Send a POST request to `api/login` with your credentials in the JSON format.
 2. On successful authentication, you will receive a JWT token in the response. Save this token for subsequent requests.
 
 ---
