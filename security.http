@@ -1,22 +1,34 @@
-### login
-POST localhost:8080/api/login?username=john&password=1234
-
 ### get the token
 POST localhost:8080/api/login
 Content-Type: application/json
 
 {
-  "username":"user",
+  "username":"newuser",
   "password":"1234"
 }
 
 
 ### get all users
 GET localhost:8080/api/users
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2OTE1MTY4Mzl9.4sOrUPVCtL3hpqz3yq5JznxmPZZkJao9ly7mMlbbHMc
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2OTE4MjgxMzV9.mgMiIW8U6XsPwTyUk__YzkW6WRKpJCLFsa9tco5ySe0
 
 ### greet
 GET localhost:8080/api/v1/greet
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2OTE1MTc4ODd9.mlJ9QCmDMCGLUPVKqhyhSNpgQgFnB0OIoBhA1lfpap0
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2OTE4MjgxMzV9.mgMiIW8U6XsPwTyUk__YzkW6WRKpJCLFsa9tco5ySe0
 
+### create new user
+POST localhost:8080/api/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY5MTgyODQ0OX0.KZHtrGe63UiM3qywfmAEBtubNmyqoRftThz2THy0BFw
+Content-Type: application/json
 
+{
+  "name": "new one",
+  "username": "newuser",
+  "password": "1234",
+  "roles": [
+    {
+      "id": 2,
+      "name": "ROLE_ADMIN"
+    }
+  ]
+}

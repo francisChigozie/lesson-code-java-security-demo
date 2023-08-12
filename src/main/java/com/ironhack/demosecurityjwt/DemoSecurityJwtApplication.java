@@ -19,16 +19,4 @@ public class DemoSecurityJwtApplication {
         SpringApplication.run(DemoSecurityJwtApplication.class, args);
     }
 
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-    }
-
-    @Bean
-    CommandLineRunner run(UserServiceImpl userServiceImpl) {
-        return args -> {
-
-        };
-    }
-
 }

@@ -72,10 +72,13 @@ public class SecurityConfig {
         // set the session creation policy to stateless
         http.sessionManagement().sessionCreationPolicy(STATELESS);
         // set up authorization for different request matchers and user roles
+        // modify this to have different configurations
         http.authorizeHttpRequests((requests) -> requests
-                .requestMatchers("/api/login/**").permitAll()
-                .requestMatchers(GET, "/api/users").hasAnyAuthority("ROLE_USER")
-                .requestMatchers(POST, "/api/users").hasAnyAuthority("ROLE_ADMIN")
+                .requestMatchers("/api/login").permitAll()
+                .requestMatchers("/swagger-ui/**").permitAll() //TODO verify how to make it work with security
+                .requestMatchers(GET, "/api/v1/users/me").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                .requestMatchers(GET, "/api/v1/users").hasAnyAuthority("ROLE_ADMIN")
+                .requestMatchers(POST, "/api/v1/users").hasAnyAuthority("ROLE_ADMIN")
                 .requestMatchers(GET, "/api/v1/greet").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .anyRequest().authenticated());
         // add the custom authentication filter to the http security object

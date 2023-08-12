@@ -139,4 +139,10 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         log.info("Fetching all users");
         return userRepository.findAll();
     }
+
+    @Override
+    public User getUserByUsername(String name) {
+        log.info("Retrieving user with username {}", name);
+        return userRepository.findByUsername(name);
+    }
 }
