@@ -13,7 +13,7 @@
 
 **Endpoint:** `api/login`  
 **Method:** `POST`  
-**Body:** JSON object containing your credentials.
+**Body:** JSON object containing your credentials..
 
 **Request Format:**
 
